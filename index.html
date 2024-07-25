@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Inicio de proyecto 2</h1>
+    <div>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+        </style>
+
+        <body>
+            <div class=container>
+                <h1>TekIT</h1>
+                <p>Fast Solutions</p>
+            </div>
+            <div class="navigation">
+                <button id="sized" class="menu">
+                    <span></span>
+                </button>
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content animated zoomIn">
+                        <div class="modal-header">
+                            <span class="close">×</span>
+                        </div>
+
+                        <div class="modal-body nav">
+                            <ul>
+                                <li><a href="#">Sign Up</a></li>
+                                <li>
+                                    <form class="ftm" action="action_page.php">
+                                        <div class="container-form">                           
+                                            <label for="nombre"><b>Correo Electronico</b></label>
+                                            <input type="email" placeholder=" " name="nombre" id="nombre" required>
+                                
+                                            <label for="lista"><b>Contraseña</b></label>
+                                            <input type="password" placeholder=" " name="lista" id="listaform" required>
+                                            <button type="submit" class="sendbtn">Enviar</button
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+        </body>
+    </div>
+
+<!--<section>
+        <div>
+            <form action="">
+                <label for="correo">Correo Electronico</label>
+                <input type="text" placeholder="Correo">
+            </form>
+        </div>
+    </section> 
+-->
+
+    <script src="script.js"></script>
 </body>
+
 </html>
