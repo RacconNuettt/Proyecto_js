@@ -4,24 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/tareas.css">
 </head>
 
 <body>
-    <header class="header-p">
-        <section class="ctn-nav">
-            <div class="nav-area">
-                <nav class="nav">
-                    <ul class="ctn-ul">
-                        <li id="ctn-li">Contact</li>
-                        <li id="ctn-li">About Us</li>
-                        <li id="ctn-li">Home</li>
-                        <li id="ctn-li">Administration</li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-    </header>
+    <div>
+        <header class="header-p">
+            <section class="ctn-nav">
+                <div class="nav-area">
+                    <nav class="nav">
+                        <ul class="ctn-ul">
+                            <li id="ctn-li">Contact</li>
+                            <li id="ctn-li">About Us</li>
+                            <li id="ctn-li">Home</li>
+                            <li id="ctn-li">Administration</li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+        </header>
+    </div>
+
     <section>
         <div>
             
@@ -30,32 +34,32 @@
     <br>
     <hr>
     <br>
-    <main class="main-stc">
+    <div>
         <section class="ctn-cont">
             <div class="cont">
                 <div class="task">
                     <div>
                         <div>
                             <label for="txt">Title</label>
-                            <input type="datetime">
-                        </div>
-
-                        <div>
-                            <label for="txt">Priotity</label>
                             <input type="text">
                         </div>
-
                         <div>
-                            <select name="priotity" id="priority"></select>
-                            <option value="a">Low</option>
-                            <option value="b">Intermediate</option>
-                            <option value="c">Important</option>
+                            <label for="txt">Date</label>
+                            <input type="date">
+                        </div>
+                        <div>
+
+                            <select name="priotity" id="priority">
+                                <option value="Low">Low</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Important">Important</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 
     <footer>
         <script src=""></script>
