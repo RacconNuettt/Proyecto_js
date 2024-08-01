@@ -75,7 +75,17 @@ function cargarTareas() {
 addTask.addEventListener("click", function () {
     const title = taskTitle.value;
     const priority = taskPriority.value;
+    
     if (title && priority) {
+
+        const taskE = tasks.find(task => task.title === title && task.priority === priority);
+
+        if(taskE){
+
+            alert("Esta tarea ya esta registrada")
+
+        }else{
+
         const newTask = { title, priority };
         tasks.push(newTask);
         const tarea = crearTarea(newTask);
@@ -83,6 +93,8 @@ addTask.addEventListener("click", function () {
         guardarTarea();
         taskTitle.value = "";
         taskPriority.value = "Low";
+        }
+
     }else{
         alert("No se permite agregar datos vacios")
     }
