@@ -1,5 +1,270 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    font-family: "Open Sans", Futura, Helvetica, Arial, sans-serif;
+
 }
 
+body {
+    position: relative;
+    color: #000;
+    font-family: "Open Sans", Futura, Helvetica, Arial, sans-serif;
+    max-width:100%;
+    width:100%;
+    overflow-x:hidden;
+}
+
+.animatedbg {
+    background-size: 100% 200%;
+    animation: changebg 5s linear infinite;
+}
+
+
+.header-p {
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+    padding: 20px;
+    background-color: black;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo-text{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 60px;
+    text-shadow: 0 0 5px #ff6bf0, 0 0 10px #fd85ff, 0 0 20px #ff6edd;
+    border: none; 
+    color: white;
+}
+
+.container p {
+    margin-left: 60px;
+    color: white;
+}
+
+.nav-area .ctn-ul a {
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+.nav-area #ctn-li {
+    display: inline-flex;
+    color: black;
+    font-weight: lighter;
+    font-size: 16px;
+    -webkit-font-smoothing: antilasing;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+#a-link {
+    animation: borde 5s alternate infinite; 
+    background-color: rgb(255, 255, 255);
+    font-weight: bolder;
+    border-radius: 10px;
+    color: black;
+}
+
+@keyframes borde {
+    0% {
+        box-shadow: 0 0 10px 2px blue;
+        border-radius: 10px;
+    }
+
+    25% {
+        box-shadow: 0 0 10px 2px red;
+        border-radius: 10px;
+    }
+
+    50% {
+        box-shadow: 0 0 10px 2px violet;
+        border-radius: 10px;
+    }
+
+    75% {
+        box-shadow: 0 0 10px 2px mediumvioletred;
+        border-radius: 10px;
+    }
+
+    100% {
+        box-shadow: 0 0 10px 2px greenyellow;
+        border-radius: 10px;
+    }
+}
+
+#a-link:hover {
+    text-decoration: underline;
+}
+
+.task {
+    width: 100%;
+    height: 60px;
+    box-shadow: 1px rgb(0, 0, 0);
+    display: grid;
+    padding: 100px;
+    grid-template-columns: auto auto;
+    
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    border: none;
+}
+
+@keyframes borde-r {
+    0% {
+        box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+        border-radius: 20px;
+    }
+
+    25% {
+        box-shadow: 0 0 10px 2px rgb(39, 36, 36);
+        border-radius: 20px;
+    }
+
+    50% {
+        box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+        border-radius: 20px;
+    }
+
+    75% {
+        box-shadow: 0 0 10px 2px rgb(36, 34, 35);
+        border-radius: 20px;
+    }
+
+    100% {
+        box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+        border-radius: 20px;
+    }
+} 
+
+.form-content>div {
+    margin-bottom: 10px;
+}
+
+.form-content label {
+    display: block;
+    margin-bottom: 5px;
+    border: none;
+}
+
+.form-content input,
+.form-content select {
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background: #ddd1d1;
+    outline: none;
+    color: rgb(0, 0, 0);
+}
+
+.btn-summit {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #00000080;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #00000080;
+    transition: 0.5s ease;
+    user-select: none;
+}
+.btn-summit:hover,
+:focus {
+    color: #ffffff;
+    background: #363232;
+    border: none;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #c17eff, 0 0 20px #c17eff, 0 0 50px #c17eff, 0 0 100px #c17eff;
+}
+
+.btn-sumit:hover,
+:focus {
+    color: #ffffff;
+    background: #363232;
+    border: none;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+} 
+
+#deleteTaskBtn,
+#deleteEventBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#editTaskBtn,
+#editEventBtn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-container,
+#event-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.task,
+.event {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(197, 177, 177, 0.2);
+    width: 96%;
+    height: auto;
+}
+
+.ctnsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}

@@ -38,6 +38,7 @@ registerForm.onsubmit = function(event) {
     alert('Registro exitoso.');
 
     registerForm.reset();
+    
 };
 
 // Manejo del login
@@ -62,3 +63,4 @@ loginForm.onsubmit = function(event) {
 
     loginForm.reset();
 };
+
