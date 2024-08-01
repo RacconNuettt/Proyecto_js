@@ -25,7 +25,7 @@ registerForm.onsubmit = function(event) {
     const password = document.getElementById('registerPassword').value;
 
 // Hace una validacion para verificar si el usario ya existe 
-    let users = JSON.parse(localStorage.getItem('users')) || [];
+    let users = JSON.parse(localStorage.getItem('users')) || []; //daniel@gmail.com peru
     if (users.find(user => user.email === email)) {
         alert('El usuario ya existe.');
         return;

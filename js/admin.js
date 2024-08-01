@@ -37,14 +37,20 @@ function crearTarea(task) {
     taskDiv.appendChild(deleteBtn);
 
     deleteBtn.addEventListener("click", function () {
+        //esta funcion lo que me permite hacer es hacer una validacion si la tarea que quiero
+        //eliminar es igual a true lo que va a hacer es eliminar esa tarea
         tasks = tasks.filter(t => t !== task);
         guardarTarea();
         taskDiv.remove();
     });
 
+    //Esta funcion me va a permitir editar las tareas
     editBtn.addEventListener("click", function () {
         const newTitle = prompt("Edit title", task.title);
         const newPriority = prompt("Change the task priority", task.priority);
+
+        //Este If lo que hace es es si en el input hay algo escrito lo que va a hacer es 
+        //hacer todo el procedimiento correcto para actualizar la tarea por la nueva agregada por el usuario
         if (newTitle && newPriority) {
             task.title = newTitle;
             task.priority = newPriority;
@@ -55,6 +61,10 @@ function crearTarea(task) {
     return taskDiv;
 }
 
+//cargar tarea lo que hace es que carga la informacion de las tareas guardadas
+//y me permite para eso utilizamos un forEach para ir en cada espacio del objeto, y por medio
+//de una variable creada "tarea" va a almacenar los datos de la funcion creartarea(task) para que despues dentro de la 
+//taskContainer agrega esa tarea al contenedor 
 function cargarTareas() {
     tasks.forEach(task => {
         const tarea = crearTarea(task);
@@ -80,6 +90,8 @@ addTask.addEventListener("click", function () {
 
 cargarTareas();
 
+
+//esta logica es literalmente igual que la de tareas 
 const eventTitle = document.getElementById("event-title");
 const eventDate = document.getElementById("event-date");
 const addEvent = document.getElementById("addEvent");
